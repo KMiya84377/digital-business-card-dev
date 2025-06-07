@@ -1,56 +1,82 @@
 .socialLinks {
+  margin: var(--spacing-md) 0;
+}
+
+.card {
   background-color: var(--card-background);
   border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 2rem;
-  margin: 2rem 0;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  padding: var(--spacing-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .title {
-  font-size: 1.4rem;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-md);
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 .linksContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--spacing-sm);
 }
 
 .link {
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .link:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus .linkButton {
+  box-shadow: var(--focus-ring);
 }
 
 .linkButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
   font-weight: 500;
   color: white;
-  min-width: 150px;
+  background-color: var(--primary-color);
+  min-width: 160px;
+  transition: background-color 0.2s ease;
+  border: none;
+}
+
+.linkButton:hover {
+  background-color: #0550a0;
+}
+
+.linkIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-right: var(--spacing-xs);
+  font-size: 14px;
 }
 
 .linkText {
-  margin-left: 0.5rem;
-}
-
-.x {
-  background-color: #000000;
-}
-
-.qiita {
-  background-color: #55c500;
+  font-size: var(--font-size-body);
 }
 
 @media (max-width: 768px) {

@@ -6,21 +6,23 @@
 
 .main {
   flex: 1;
-  padding: 2rem 0;
+  padding: var(--spacing-md) 0;
+  background-color: var(--background-color);
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--spacing-sm);
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .main {
-    padding: 1.5rem 0;
+    padding: var(--spacing-sm) 0;
   }
   
   .container {
-    padding: 0 15px;
+    padding: 0 var(--spacing-xs);
   }
 }

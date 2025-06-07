@@ -1,25 +1,29 @@
 .profile {
+  margin: var(--spacing-md) 0;
+}
+
+.card {
   background-color: var(--card-background);
   border-radius: var(--border-radius);
-  box-shadow: var(--card-shadow);
-  padding: 2rem;
-  margin: 2rem 0;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  padding: var(--spacing-md);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .avatarContainer {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .avatar {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--primary-color);
+  border: 3px solid var(--primary-color);
 }
 
 .info {
@@ -27,29 +31,31 @@
 }
 
 .name {
-  font-size: 1.8rem;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--secondary-color);
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-color);
 }
 
 .description {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
   color: var(--text-color);
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .profile {
+  .card {
     flex-direction: row;
     text-align: left;
     align-items: flex-start;
+    padding: var(--spacing-lg);
   }
 
   .avatarContainer {
-    margin-right: 2rem;
+    margin-right: var(--spacing-md);
     margin-bottom: 0;
   }
 
