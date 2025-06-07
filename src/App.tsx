@@ -9,7 +9,10 @@ import styles from './App.module.css';
 const App: React.FC = () => {
   const [profile] = useState<UserProfile>({
     name: '山田 太郎',
-    description: 'フロントエンドエンジニアとして活動しています。React、TypeScript、Next.jsを使った開発が得意です。UI/UXにこだわったWebアプリケーション開発に情熱を持っています。趣味は読書と旅行で、新しい技術を学ぶことが好きです。',
+    company: '株式会社テクノデジタル',
+    workDescription: 'フロントエンドエンジニアとして活動しています。React、TypeScript、Next.jsを使った開発が得意です。UI/UXにこだわったWebアプリケーション開発に情熱を持っています。',
+    hobbies: '読書と旅行が趣味です。特に技術書を読むことが好きで、最近はデザインシステムについて学んでいます。休日は近場の温泉巡りをすることもあります。',
+    message: '新しい技術を学ぶことが好きです。一緒に素晴らしいプロダクトを作りましょう！',
     avatarUrl: '/assets/avatar.jpg'
   });
 

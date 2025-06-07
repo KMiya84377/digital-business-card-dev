@@ -33,12 +33,42 @@
   color: var(--secondary-color);
 }
 
-.description {
+.company {
+  font-size: 0.875rem; /* 14px */
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.descriptionItem {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.descriptionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.descriptionText {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text-color);
-  max-width: 600px;
-  margin: 0 auto;
+}
+
+.message {
+  font-weight: 500;
+  color: var(--accent-color);
 }
 
 @media (min-width: 768px) {

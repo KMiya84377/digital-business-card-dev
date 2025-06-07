@@ -1,6 +1,9 @@
 export interface UserProfile {
   name: string;
-  description: string;
+  company: string;
+  workDescription: string;
+  hobbies: string;
+  message: string;
   avatarUrl: string;
 }
 
