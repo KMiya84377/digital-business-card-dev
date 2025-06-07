@@ -1,0 +1,66 @@
+.socialLinks {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.linksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: translateY(-3px);
+}
+
+.linkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  color: white;
+  min-width: 150px;
+}
+
+.linkText {
+  margin-left: 0.5rem;
+}
+
+.x {
+  background-color: #000000;
+}
+
+.qiita {
+  background-color: #55c500;
+}
+
+@media (max-width: 768px) {
+  .linksContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .linkButton {
+    width: 100%;
+    min-width: 200px;
+  }
+}
