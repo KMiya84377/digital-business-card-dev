@@ -1,0 +1,89 @@
+.socialLinksContainer {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.title {
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  color: var(--text-color);
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.linkButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  text-align: center;
+  height: 100%;
+}
+
+.linkButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.linkPlatform {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-color);
+}
+
+.linkLabel {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* X (Twitter) specific styling */
+.linkButton[href*="twitter.com"],
+.linkButton[href*="x.com"] {
+  background-color: #f5f8fa;
+  border-color: #1da1f2;
+}
+
+.linkButton[href*="twitter.com"]:hover,
+.linkButton[href*="x.com"]:hover {
+  background-color: #e8f5fd;
+}
+
+/* Qiita specific styling */
+.linkButton[href*="qiita.com"] {
+  background-color: #f6f6f6;
+  border-color: #55c500;
+}
+
+.linkButton[href*="qiita.com"]:hover {
+  background-color: #f0f7eb;
+}
+
+@media (max-width: 768px) {
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .linksGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .socialLinksContainer {
+    padding: var(--spacing-md);
+  }
+}

@@ -1,0 +1,31 @@
+.footer {
+  background-color: var(--card-background);
+  box-shadow: 0 -2px 4px var(--shadow-color);
+  padding: var(--spacing-md) 0;
+  margin-top: var(--spacing-lg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
