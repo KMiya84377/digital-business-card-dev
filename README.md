@@ -1,6 +1,6 @@
-# Digital Business Card (デジタル名刺)
+# デジタル名刺 | Digital Business Card
 
-デジタル名刺の自己紹介Webページプロジェクトです。
+デジタル名刺の自己紹介ページプロジェクトです。
 
 ## 概要
 このプロジェクトは、ReactとTypeScriptを使用したモダンで美しいデジタル名刺を作成するためのWebアプリケーションです。
@@ -38,23 +38,16 @@ npm run preview
 
 ## プロジェクト構成
 ```
-digital-business-card/
-├── public/              # 静的ファイル
-│   └── assets/          # 画像などのアセット
-├── src/                 # ソースコード
-│   ├── components/      # Reactコンポーネント
-│   │   ├── Header/      # ヘッダーコンポーネント
-│   │   ├── Profile/     # プロフィールコンポーネント
-│   │   ├── SocialLinks/ # ソーシャルリンクコンポーネント
-│   │   └── Footer/      # フッターコンポーネント
-│   ├── styles/          # グローバルスタイル
-│   ├── types/           # TypeScript型定義
-│   ├── App.tsx          # メインアプリケーションコンポーネント
-│   └── main.tsx         # エントリーポイント
-├── index.html           # HTMLテンプレート
-├── package.json         # プロジェクト設定
-├── tsconfig.json        # TypeScript設定
-└── vite.config.ts       # Vite設定
+/
+├── public/           # 静的ファイル
+│   └── assets/       # 画像などのアセット
+├── src/              # ソースコード
+│   ├── components/   # Reactコンポーネント
+│   ├── types/        # TypeScript型定義
+│   ├── App.tsx       # メインアプリケーション
+│   └── main.tsx      # エントリーポイント
+├── index.html        # HTMLテンプレート
+└── package.json      # プロジェクト設定
 ```
 
 ## ブランチ戦略

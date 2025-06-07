@@ -1,89 +1,66 @@
-.socialLinksContainer {
+.socialLinks {
   background-color: var(--card-background);
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 8px var(--shadow-color);
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  margin: 2rem 0;
 }
 
 .title {
   font-size: 1.4rem;
-  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
   text-align: center;
-  color: var(--text-color);
+  color: var(--secondary-color);
 }
 
-.linksGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-md);
+.linksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: translateY(-3px);
 }
 
 .linkButton {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-md);
-  background-color: var(--background-color);
-  border-radius: var(--border-radius);
-  transition: all 0.3s ease;
-  border: 1px solid #eee;
-  text-align: center;
-  height: 100%;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  color: white;
+  min-width: 150px;
 }
 
-.linkButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px var(--shadow-color);
+.linkText {
+  margin-left: 0.5rem;
 }
 
-.linkPlatform {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: var(--spacing-sm);
-  color: var(--primary-color);
+.x {
+  background-color: #000000;
 }
 
-.linkLabel {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* X (Twitter) specific styling */
-.linkButton[href*="twitter.com"],
-.linkButton[href*="x.com"] {
-  background-color: #f5f8fa;
-  border-color: #1da1f2;
-}
-
-.linkButton[href*="twitter.com"]:hover,
-.linkButton[href*="x.com"]:hover {
-  background-color: #e8f5fd;
-}
-
-/* Qiita specific styling */
-.linkButton[href*="qiita.com"] {
-  background-color: #f6f6f6;
-  border-color: #55c500;
-}
-
-.linkButton[href*="qiita.com"]:hover {
-  background-color: #f0f7eb;
+.qiita {
+  background-color: #55c500;
 }
 
 @media (max-width: 768px) {
-  .linksGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .linksGrid {
-    grid-template-columns: 1fr;
+  .linksContainer {
+    flex-direction: column;
+    align-items: center;
   }
   
-  .socialLinksContainer {
-    padding: var(--spacing-md);
+  .linkButton {
+    width: 100%;
+    min-width: 200px;
   }
 }

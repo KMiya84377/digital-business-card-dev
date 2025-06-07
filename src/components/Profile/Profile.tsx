@@ -1,4 +1,3 @@
-import React from 'react';
 import { UserProfile } from '../../types';
 import styles from './Profile.module.css';
 
@@ -8,7 +7,7 @@ interface ProfileProps {
 
 const Profile: React.FC<ProfileProps> = ({ profile }) => {
   return (
-    <div className={styles.profileCard}>
+    <section className={styles.profile}>
       <div className={styles.avatarContainer}>
         <img 
           src={profile.avatarUrl} 
@@ -16,11 +15,11 @@ const Profile: React.FC<ProfileProps> = ({ profile }) => {
           className={styles.avatar}
         />
       </div>
-      <div className={styles.profileInfo}>
+      <div className={styles.info}>
         <h2 className={styles.name}>{profile.name}</h2>
         <p className={styles.description}>{profile.description}</p>
       </div>
-    </div>
+    </section>
   );
 };
 

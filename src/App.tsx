@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Profile from './components/Profile';
 import SocialLinks from './components/SocialLinks';
@@ -6,40 +6,42 @@ import Footer from './components/Footer';
 import { UserProfile, SocialLink } from './types';
 import styles from './App.module.css';
 
-// Sample profile data
-const profileData: UserProfile = {
-  name: '山田 太郎',
-  description: 'フロントエンドエンジニア。React、TypeScript、UIデザインが得意です。新しい技術を学ぶことが好きで、常に最新のウェブ開発トレンドをフォローしています。趣味は読書と旅行です。',
-  avatarUrl: '/assets/avatar.svg'
-};
+const App: React.FC = () => {
+  const [profile] = useState<UserProfile>({
+    name: '山田 太郎',
+    description: 'フロントエンドエンジニアとして活動しています。React、TypeScript、Next.jsを使った開発が得意です。UI/UXにこだわったWebアプリケーション開発に情熱を持っています。趣味は読書と旅行で、新しい技術を学ぶことが好きです。',
+    avatarUrl: '/assets/avatar.jpg'
+  });
 
-// Sample social links
-const socialLinks: SocialLink[] = [
-  {
-    platform: 'X (Twitter)',
-    url: 'https://twitter.com/example',
-    label: '@example'
-  },
-  {
-    platform: 'Qiita',
-    url: 'https://qiita.com/example',
-    label: 'example'
-  }
-];
+  const [socialLinks] = useState<SocialLink[]>([
+    {
+      platform: 'X',
+      url: 'https://x.com/K5ARULtkUA4594',
+      label: 'X (Twitter)'
+    },
+    {
+      platform: 'Qiita',
+      url: 'https://qiita.com/Takenoko4594',
+      label: 'Qiita'
+    }
+  ]);
 
-function App() {
+  useEffect(() => {
+    document.title = `${profile.name} | デジタル名刺`;
+  }, [profile.name]);
+
   return (
     <div className={styles.app}>
-      <Header title="デジタル名刺" />
+      <Header />
       <main className={styles.main}>
         <div className={styles.container}>
-          <Profile profile={profileData} />
+          <Profile profile={profile} />
           <SocialLinks links={socialLinks} />
         </div>
       </main>
-      <Footer copyrightName={profileData.name} />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
