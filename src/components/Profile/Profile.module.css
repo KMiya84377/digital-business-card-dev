@@ -34,41 +34,41 @@
 }
 
 .company {
-  font-size: 0.875rem; /* 14px */
-  color: var(--text-secondary);
+  font-size: 14px;
+  color: #666;
   margin-bottom: 1.5rem;
 }
 
-.descriptionSection {
+.sectionContainer {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
-.descriptionItem {
+.section {
   padding: 1rem;
   border-radius: var(--border-radius);
   background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid var(--primary-color);
 }
 
-.descriptionTitle {
+.sectionTitle {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
 }
 
-.descriptionText {
-  font-size: 1rem;
+.sectionText {
+  font-size: 16px;
   line-height: 1.6;
   color: var(--text-color);
 }
 
 .message {
   font-weight: 500;
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {

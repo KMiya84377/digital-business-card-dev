@@ -19,20 +19,20 @@ const Profile: React.FC<ProfileProps> = ({ profile }) => {
         <h2 className={styles.name}>{profile.name}</h2>
         <p className={styles.company}>{profile.company}</p>
         
-        <div className={styles.descriptionSection}>
-          <div className={styles.descriptionItem}>
-            <h3 className={styles.descriptionTitle}>仕事</h3>
-            <p className={styles.descriptionText}>{profile.workDescription}</p>
+        <div className={styles.sectionContainer}>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>仕事</h3>
+            <p className={styles.sectionText}>{profile.workDescription}</p>
           </div>
           
-          <div className={styles.descriptionItem}>
-            <h3 className={styles.descriptionTitle}>趣味</h3>
-            <p className={styles.descriptionText}>{profile.hobbies}</p>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>趣味</h3>
+            <p className={styles.sectionText}>{profile.hobbies}</p>
           </div>
           
-          <div className={styles.descriptionItem}>
-            <h3 className={styles.descriptionTitle}>一言</h3>
-            <p className={`${styles.descriptionText} ${styles.message}`}>{profile.message}</p>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>一言</h3>
+            <p className={`${styles.sectionText} ${styles.message}`}>{profile.message}</p>
           </div>
         </div>
       </div>
