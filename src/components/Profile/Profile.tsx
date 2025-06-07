@@ -17,7 +17,24 @@ const Profile: React.FC<ProfileProps> = ({ profile }) => {
       </div>
       <div className={styles.info}>
         <h2 className={styles.name}>{profile.name}</h2>
-        <p className={styles.description}>{profile.description}</p>
+        <p className={styles.company}>{profile.company}</p>
+        
+        <div className={styles.sectionContainer}>
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>仕事</h3>
+            <p className={styles.sectionText}>{profile.workDescription}</p>
+          </div>
+          
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>趣味</h3>
+            <p className={styles.sectionText}>{profile.hobbies}</p>
+          </div>
+          
+          <div className={styles.section}>
+            <h3 className={styles.sectionTitle}>一言</h3>
+            <p className={`${styles.sectionText} ${styles.message}`}>{profile.message}</p>
+          </div>
+        </div>
       </div>
     </section>
   );
