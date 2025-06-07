@@ -7,8 +7,9 @@ interface ProfileProps {
 
 const Profile: React.FC<ProfileProps> = ({ profile }) => {
   return (
-    <section id="profile" className={styles.profile}>
-      <div className={styles.card}>
+    <section className={styles.profile}>
+      <h2 className={styles.sectionTitle}>プロフィール</h2>
+      <div className={styles.profileCard}>
         <div className={styles.avatarContainer}>
           <img 
             src={profile.avatarUrl} 
@@ -17,7 +18,8 @@ const Profile: React.FC<ProfileProps> = ({ profile }) => {
           />
         </div>
         <div className={styles.info}>
-          <h2 className={styles.name}>{profile.name}</h2>
+          <h3 className={styles.name}>{profile.name}</h3>
+          <div className={styles.divider}></div>
           <p className={styles.description}>{profile.description}</p>
         </div>
       </div>

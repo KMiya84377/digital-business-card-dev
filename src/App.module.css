@@ -2,26 +2,36 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--background-gray);
 }
 
 .main {
   flex: 1;
   padding: var(--spacing-md) 0;
-  background-color: var(--background-color);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
   width: 100%;
+}
+
+.contentWrapper {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px var(--shadow-color);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
 }
 
 @media (max-width: 768px) {
   .main {
     padding: var(--spacing-sm) 0;
   }
-  
+}
+
+@media (max-width: 480px) {
   .container {
     padding: 0 var(--spacing-xs);
   }

@@ -35,8 +35,10 @@ const App: React.FC = () => {
       <Header />
       <main className={styles.main}>
         <div className={styles.container}>
-          <Profile profile={profile} />
-          <SocialLinks links={socialLinks} />
+          <div className={styles.contentWrapper}>
+            <Profile profile={profile} />
+            <SocialLinks links={socialLinks} />
+          </div>
         </div>
       </main>
       <Footer />

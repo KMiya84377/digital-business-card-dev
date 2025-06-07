@@ -1,12 +1,13 @@
 :root {
-  /* デジタル庁デザインシステム準拠カラーパレット */
+  /* デジタル庁デザインシステム カラーパレット */
   --primary-color: #0969DA; /* デジタル庁ブルー */
   --secondary-color: #E5F4FD; /* ライトブルー */
   --text-color: #24292F; /* ダークグレー */
-  --background-color: #F6F8FA; /* グレー系 */
+  --background-color: #FFFFFF;
+  --background-gray: #F6F8FA; /* グレー系 */
   --card-background: #FFFFFF;
   --shadow-color: rgba(0, 0, 0, 0.08);
-  --border-radius: 8px;
+  --border-color: #D0D7DE;
   
   /* 8pxグリッドシステム */
   --spacing-xs: 8px;
@@ -15,18 +16,21 @@
   --spacing-lg: 32px;
   
   /* タイポグラフィ */
-  --font-family: 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', sans-serif;
-  --font-size-h1: 24px;
-  --line-height-h1: 32px;
-  --font-size-h2: 20px;
-  --line-height-h2: 28px;
+  --font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+  --font-size-heading-l: 24px;
+  --line-height-heading-l: 32px;
+  --font-size-heading-m: 20px;
+  --line-height-heading-m: 28px;
   --font-size-body: 16px;
   --line-height-body: 24px;
   --font-size-small: 14px;
   --line-height-small: 20px;
   
-  /* フォーカス表示 */
+  /* その他 */
+  --border-radius: 8px;
   --focus-ring: 0 0 0 4px rgba(9, 105, 218, 0.3);
+  --container-max-width: 1200px;
+  --touch-target-size: 44px;
 }
 
 * {
@@ -44,15 +48,15 @@ body {
 }
 
 h1 {
-  font-size: var(--font-size-h1);
-  line-height: var(--line-height-h1);
+  font-size: var(--font-size-heading-l);
+  line-height: var(--line-height-heading-l);
   font-weight: 700;
   margin-bottom: var(--spacing-sm);
 }
 
 h2 {
-  font-size: var(--font-size-h2);
-  line-height: var(--line-height-h2);
+  font-size: var(--font-size-heading-m);
+  line-height: var(--line-height-heading-m);
   font-weight: 700;
   margin-bottom: var(--spacing-sm);
 }
@@ -71,7 +75,7 @@ p {
 a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 a:hover {
@@ -89,10 +93,9 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
-  width: 100%;
 }
 
 /* アクセシビリティ対応 */
@@ -116,18 +119,10 @@ img {
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: var(--font-size-small);
-    line-height: var(--line-height-small);
-  }
-  
-  h1 {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  
-  h2 {
-    font-size: 18px;
-    line-height: 26px;
+  :root {
+    --font-size-heading-l: 22px;
+    --line-height-heading-l: 30px;
+    --font-size-heading-m: 18px;
+    --line-height-heading-m: 26px;
   }
 }

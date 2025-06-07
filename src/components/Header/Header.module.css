@@ -2,56 +2,74 @@
   background-color: var(--primary-color);
   color: white;
   padding: var(--spacing-sm) 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px var(--shadow-color);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logoContainer {
   display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
   align-items: center;
 }
 
+.logoIcon {
+  font-size: var(--font-size-heading-l);
+  margin-right: var(--spacing-xs);
+}
+
 .title {
-  font-size: var(--font-size-h1);
-  line-height: var(--line-height-h1);
+  font-size: var(--font-size-heading-m);
+  line-height: var(--line-height-heading-m);
   font-weight: 700;
   letter-spacing: 0.5px;
   margin: 0;
   color: white;
 }
 
+.subtitle {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  margin: 0;
+  opacity: 0.9;
+}
+
 .nav {
-  display: flex;
-  align-items: center;
+  margin-top: var(--spacing-xs);
 }
 
 .navList {
-  display: flex;
   list-style: none;
+  display: flex;
+  gap: var(--spacing-sm);
   margin: 0;
   padding: 0;
 }
 
 .navItem {
-  margin-left: var(--spacing-sm);
+  margin: 0;
 }
 
 .navLink {
   color: white;
+  text-decoration: none;
   font-size: var(--font-size-body);
-  font-weight: 500;
   padding: var(--spacing-xs);
   border-radius: var(--border-radius);
   transition: background-color 0.2s ease;
-  text-decoration: none;
+  display: inline-block;
 }
 
 .navLink:hover {
@@ -61,30 +79,37 @@
 
 .navLink:focus {
   outline: none;
-  box-shadow: var(--focus-ring);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    padding: var(--spacing-xs);
+    align-items: flex-start;
   }
   
-  .logoContainer {
-    margin-bottom: var(--spacing-xs);
+  .nav {
+    width: 100%;
+    margin-top: var(--spacing-sm);
   }
   
-  .title {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  
-  .navItem {
-    margin-left: var(--spacing-xs);
+  .navList {
+    flex-direction: column;
+    gap: var(--spacing-xs);
   }
   
   .navLink {
-    padding: var(--spacing-xs) calc(var(--spacing-xs) / 2);
+    display: block;
+    padding: var(--spacing-xs) 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .title {
+    font-size: 18px;
+  }
+  
+  .navLink {
     font-size: var(--font-size-small);
   }
 }
