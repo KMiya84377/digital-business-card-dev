@@ -5,6 +5,7 @@ import SocialLinks from './components/SocialLinks';
 import Footer from './components/Footer';
 import { UserProfile, SocialLink } from './types';
 import styles from './App.module.css';
+import { ThemeProvider } from './context/ThemeContext';
 
 const App: React.FC = () => {
   const [profile] = useState<UserProfile>({
@@ -34,16 +35,18 @@ const App: React.FC = () => {
   }, [profile.name]);
 
   return (
-    <div className={styles.app}>
-      <Header />
-      <main className={styles.main}>
-        <div className={styles.container}>
-          <Profile profile={profile} />
-          <SocialLinks links={socialLinks} />
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className={styles.app}>
+        <Header />
+        <main className={styles.main}>
+          <div className={styles.container}>
+            <Profile profile={profile} />
+            <SocialLinks links={socialLinks} />
+          </div>
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 
