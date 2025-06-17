@@ -30,7 +30,7 @@ const App: React.FC = () => {
   ]);
 
   useEffect(() => {
-    document.title = `${profile.name} | デジタル名刺`;
+    document.title = `${profile.name} | Profile`;
   }, [profile.name]);
 
   return (
