@@ -17,7 +17,6 @@ const Profile: React.FC<ProfileProps> = ({ profile }) => {
       </div>
       <div className={styles.info}>
         <h2 className={styles.name}>{profile.name}</h2>
-        <p className={styles.company}>{profile.company}</p>
         
         <div className={styles.sectionContainer}>
           <div className={styles.section}>
