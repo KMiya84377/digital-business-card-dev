@@ -1,3 +1,4 @@
+import React from 'react';
 import { SocialLink } from '../../types';
 import styles from './SocialLinks.module.css';
 
