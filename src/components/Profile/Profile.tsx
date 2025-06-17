@@ -1,3 +1,4 @@
+import React from 'react';
 import { UserProfile } from '../../types';
 import styles from './Profile.module.css';
 
